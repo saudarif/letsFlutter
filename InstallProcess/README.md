@@ -48,20 +48,20 @@
         brew install --HEAD libimobiledevice
     ```
     - If you get an error like : 
-        ```
-            configure: error: Package requirements (libusbmuxd >= 1.1.0) were not met:
-            Requested 'libusbmuxd >= 1.1.0' but version of libusbmuxd is 1.0.10
-        ```
+    ```
+        configure: error: Package requirements (libusbmuxd >= 1.1.0) were not met:
+        Requested 'libusbmuxd >= 1.1.0' but version of libusbmuxd is 1.0.10
+    ```
     - To fix this, run following commands:
-            ```
-                brew update
-                brew uninstall --ignore-dependencies libimobiledevice
-                brew uninstall --ignore-dependencies usbmuxd
-                brew install --HEAD usbmuxd
-                brew unlink usbmuxd
-                brew link usbmuxd
-                brew install --HEAD libimobiledevice
-            ```
+    ```
+        brew update
+        brew uninstall --ignore-dependencies libimobiledevice
+        brew uninstall --ignore-dependencies usbmuxd
+        brew install --HEAD usbmuxd
+        brew unlink usbmuxd
+        brew link usbmuxd
+        brew install --HEAD libimobiledevice
+    ```
 
 - If you get this issue while running "flutter doctor" command that "Android licenses not accepted." To resolve this run following command :
     ```
