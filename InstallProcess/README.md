@@ -47,12 +47,12 @@
     ```
         brew install --HEAD libimobiledevice
     ```
-        - If you get an error like : 
+    - If you get an error like : 
         ```
             configure: error: Package requirements (libusbmuxd >= 1.1.0) were not met:
             Requested 'libusbmuxd >= 1.1.0' but version of libusbmuxd is 1.0.10
         ```
-            To fix this, run following commands:
+    - To fix this, run following commands:
             ```
                 brew update
                 brew uninstall --ignore-dependencies libimobiledevice
