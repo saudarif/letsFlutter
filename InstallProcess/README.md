@@ -72,3 +72,10 @@
         ./sdkmanager --licenses
     ```
     - follow the instaructions and accept the licenses.
+
+- Install (flutter and dart) plugins. On Android Studio :
+    - Start Android Studio.
+    - Open plugin preferences : Preferences>Plugins
+    - Select Browse repositories…, select the Flutter plug-in and click install
+    - Click Yes when prompted to install the Dart plugin.
+    - Click Restart when prompted.
