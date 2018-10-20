@@ -112,8 +112,11 @@ But we can do a lot more with Documentation comments. The code snippet below sho
     return powerLevel.toString();
   }
 ```
+#### Markdown and dartdoc.
 
-And we can use markdown too. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). But we should avoid using markdown excessively.
+And we can use markdown too. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). But we should avoid using markdown excessively. Also, we can use [dartdoc](https://github.com/dart-lang/dartdoc) to generate HTML documentaton for your Dart package. dartdoc comes with [Dart SDK](https://www.dartlang.org/tools/sdk). It is also in your flutter package at the location ```<path to flutter package>/flutter/bin/cache/dart-sdk/bin/dartdoc```. To generate Documentation of your project, just run dartdoc from the root directory of package.
+
+Now lets see an example of use of markdown in dart's documentation comments.
 
 ```
 /// # A Header
@@ -180,7 +183,7 @@ Links can be:
 1. But the values don't matter.
     * You can nest lists too.
 
-    
+
 Code blocks are fenced in triple backticks:
 
 ```
