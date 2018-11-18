@@ -74,3 +74,56 @@ main() {
 }
 ```
 
+On more general terms we can follow follow the example below to restrict genric parameters.
+
+```
+class Foo<T extends SomeBaseClass> {
+  // Implimentation ...
+}
+
+class Extender extends SomeBaseClass {...}
+
+//It’s OK to use SomeBaseClass or any of its subclasses as generic argument:
+
+var someBaseClassFoo = Foo<SomeBaseClass>();
+var extenderFoo = Foo<Extender>();
+
+//It’s also OK to specify no generic argument:
+
+var foo = Foo();
+print(foo); // Instance of 'Foo<SomeBaseClass>'
+```
+
+### More than one genric parameters
+
+We can have more than one generic parameters in a generic function or a generic class.
+
+```
+Map<K, V> singletonMap<K, V>(K key, V value) {
+  return <K, V>{ key, value };
+}
+```
+
+### Generic in 'function-typed parameters', 'local functions', and 'function expressions'
+
+Lets see a generic method as a parameter.
+
+```
+void functionTypedParameter(T callback<T>(T thing)) {}
+```
+
+And a local generic function.
+
+```
+void localFunction() {
+  T itself<T>(T thing) => thing;
+}
+```
+
+Also we can create a generic function expression to a local variable.
+
+```
+void functionExpression() {
+  var lambda = <T>(T thing) => thing;
+}
+```
